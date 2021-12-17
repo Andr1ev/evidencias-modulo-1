@@ -1,0 +1,140 @@
+Algoritmo sin_titulo
+	Escribir 'ingrese alumnos'
+	Leer alumno
+	Segun alumno Hacer
+		(alumno < 30):
+			Escribir "el arriendo es 400000 y el pago por alumno es" 400000/alumno
+		(alumno > 29 & alumno<50):
+			Escribir "el pago por alumno es 9500 y el costo total es" 9500*alumno
+		(alumno > 49 &  alumno<100):
+			Escribir "el pago por alumno es 7000 y el costo total es" 7500*alumno
+		alumno >= 100:
+			Escribir "el pago por alumno es 6500 y el costo total es" 6500*alumno
+	FinSegun
+FinAlgoritmo
+
+
+EJERCICIO LLAMADAS
+
+Algoritmo llamadas
+	Escribir 'ingrese minutos'
+	Leer minutos
+	Escribir 'ingrese dia'
+	Leer dia
+	Escribir 'ingrese turno'
+	Leer turno
+	Si dia <> domingo
+		Si turno == diurno
+			segun minutos hacer
+				minutos <= 5:
+					minutos=minutos*100
+					Escribir "el valor total es" minutos*1.15
+				minutos <= 8:
+					minutos=minutos*80
+					Escribir "el valor total es" minutos*1.15
+				minutos <= 10:
+					minutos=minutos*70				
+					Escribir "el valor total es" minutos*1.15
+				minutos > 10:
+					minutos=minutos*50				
+					Escribir "el valor total es" minutos*1.15
+			FinSegun
+		SiNo
+			segun minutos hacer
+				minutos <= 5:
+					minutos=minutos*100
+					Escribir "el valor total es" minutos*1.1
+			     minutos <= 8:
+					minutos=minutos*80
+					Escribir "el valor total es" minutos*1.1
+				minutos <= 10:
+					minutos=minutos*70				
+					Escribir "el valor total es" minutos*1.1
+				minutos > 10:
+					minutos=minutos*50				
+					Escribir "el valor total es" minutos*1.1
+			FinSegun	
+		FinSi		
+	SiNo
+		segun minutos hacer
+			minutos <= 5:
+				minutos=minutos*100
+				Escribir "el valor total es" minutos*1.03
+			minutos <= 8:
+				minutos=minutos*80
+				Escribir "el valor total es" minutos*1.03
+			minutos <= 10:
+				minutos=minutos*70				
+				Escribir "el valor total es" minutos*1.03
+			minutos > 10:
+				minutos=minutos*50				
+				Escribir "el valor total es" minutos*1.03
+		FinSegun
+	FinSi
+FinAlgoritmo
+
+
+
+EJERCICIO AUTOBUS
+
+Algoritmo autobus
+	Escribir 'ingrese tipo bus'
+	Leer bus
+	Escribir 'ingrese numero personas'
+	Leer personas
+	Escribir 'ingrese distancia'
+	Leer distancia
+	Segun bus  Hacer
+		'a':
+			Si personas <= 20 Entonces
+				Escribir 'el costo total es ',200*20*distancia ' y por persona es ',200*20*distancia/personas
+			SiNo
+				Escribir 'el costo total es ',200*personas*distancia ' y por persona es ',200*distancia/personas
+			FinSi
+		'b':
+			Si personas <= 20 Entonces
+				Escribir 'el costo total es ',250*20*distancia ' y por persona es ',250*20*distancia/personas
+			SiNo
+				Escribir 'el costo total es ',250*personas*distancia ' y por persona es ',250*distancia/personas
+			FinSi
+		'c':
+			Si personas <= 20 Entonces
+				Escribir 'el costo total es ',300*20*distancia ' y por persona es ',300*20*distancia/personas
+			SiNo
+				Escribir 'el costo total es ',300*personas*distancia ' y por persona es ',300*distancia/personas
+			FinSi
+	FinSegun
+FinAlgoritmo
+
+
+
+EJERCICIO HAMBURGUESA
+
+Algoritmo hamburguesas
+	Escribir 'ingrese tipo hamburguesa'
+	Leer hamburguesa
+	Escribir 'ingrese cantidad'
+	Leer cantidad
+	Escribir 'ingrese forma de pago'
+	Leer pago
+	Segun hamburguesa  Hacer
+		'sencilla':
+			Si pago='tarjeta' Entonces
+				Escribir 'el costo total es ',cantidad*2000*1.05
+			SiNo
+				Escribir 'el costo total es ',cantidad*2000
+			FinSi
+		'doble':
+			Si pago='tarjeta' Entonces
+				Escribir 'el costo total es ',cantidad*2500*1.05
+			SiNo
+				Escribir 'el costo total es ',cantidad*2500
+			FinSi
+		'triple':
+			Si pago='tarjeta' Entonces
+				Escribir 'el costo total es ',cantidad*2800*1.05
+			SiNo
+				Escribir 'el costo total es ',cantidad*2800
+			FinSi
+	FinSegun
+FinAlgoritmo

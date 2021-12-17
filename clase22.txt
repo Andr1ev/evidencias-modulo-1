@@ -1,0 +1,138 @@
+
+Menu electrodomesticos
+
+public class MenuElectrodomesticos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Refrigerador r1 = new Refrigerador("refri1", "lg", "ETD32", 350000, "a++", "340L");
+		Refrigerador r2 = new Refrigerador("refri2", "samsung", "HRA59", 350000, "a++", "300L");
+		Refrigerador r3 = new Refrigerador("refri3", "lg", "ARV31", 350000, "a++", "340L");
+		Refrigerador r4 = new Refrigerador("refri4", "samsung", "HRB68", 350000, "a++", "300L");
+
+		OpElectro op = new OpElectro();
+
+		op.agregaRefri(r1);
+		op.agregaRefri(r2);
+		op.agregaRefri(r3);
+		op.agregaRefri(r4);
+
+		System.out.printf(op.listaRefri());
+
+		// op.AgregarRefri();
+
+		// System.out.printf(op.listaRefri());
+
+		op.MostrarPorMarca();
+
+	}
+
+}
+
+
+
+Clase electrodomesticos
+
+public class Electrodomestico {
+	private String nombre;
+	private String marca;
+	private String sku;
+
+	// acceso
+
+	// String getNombre() {return nombre;}
+
+	// constructores
+	public Electrodomestico() {
+
+	}
+
+	/*
+	 * public Electrodomestico(String n, String m, String s) { this.nombre = n;
+	 * this.marca = m; this.sku = s; }
+	 */
+	// set y get
+	public void setNombre(String n) {
+		this.nombre = n;
+	}
+
+	public String getNombre() {
+		return this.nombre;
+	}
+
+	public void setMarca(String m) {
+		this.marca = m;
+	}
+
+	public String getMarca() {
+		return this.marca;
+	}
+
+	public void setSku(String s) {
+		this.sku = s;
+	}
+
+	public String getSku() {
+		return this.sku;
+	}
+
+}
+
+
+Operciones electrodomesticos
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class OpElectro {
+
+	ArrayList<Refrigerador> listaRefri = new ArrayList<Refrigerador>();
+	Scanner leer = new Scanner(System.in);
+
+	void agregaRefri(Refrigerador objrefri) {
+		listaRefri.add(objrefri);
+	}
+
+	public String listaRefri() {
+		StringBuilder resultado = new StringBuilder();
+		for (Refrigerador l : listaRefri) {
+
+			resultado.append(l.toString());
+
+		}
+		return resultado.toString();
+
+	}
+
+	public Boolean AgregarRefri() {
+		System.out.println("INGRESAR REFRIGERADOR NUEVO");
+		System.out.print("Nombre: ");
+		String nombre = leer.nextLine();
+		System.out.print("Marca: ");
+		String marca = leer.nextLine();
+		System.out.print("Sku: ");
+		String sku = leer.nextLine();
+		System.out.print("Precio: ");
+		int precio = leer.nextInt();
+		System.out.print("Eficiencia: ");
+		String efi = leer.nextLine();
+		System.out.print("Capacidad: ");
+		String cap = leer.nextLine();
+		leer.nextLine();
+		Refrigerador nuevoRefri = new Refrigerador(nombre, marca, sku, precio, efi, cap);
+		return listaRefri.add(nuevoRefri);
+
+	}
+
+	void MostrarPorMarca() {
+		System.out.print("Ingrese Marca a buscar: ");
+		String marca = leer.nextLine();
+		for (int i = 0; i < listaRefri.size(); i++) {
+
+			if (listaRefri.get(i).getMarca().equalsIgnoreCase(marca)) {
+				System.out.println(listaRefri.get(i));
+			}
+		}
+	}
+}
+

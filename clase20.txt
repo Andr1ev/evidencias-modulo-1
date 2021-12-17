@@ -1,0 +1,130 @@
+en esta clase desarrollamos una aplicacion que permitia revisar si una fecha ingresada era o no correcta, se utilizó un menu y una clase de calculo
+
+
+
+Menu fecha
+
+import java.util.Scanner;
+
+public class MenuFecha {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+		Fecha f = new Fecha();
+
+		System.out.println("ingrese dia: ");
+		int _dia = leer.nextInt();
+		f.setDia(_dia);
+		System.out.println("ingrese mes: ");
+		int _mes = leer.nextInt();
+		f.setMes(_mes);
+		System.out.println("ingrese año: ");
+		int _anio = leer.nextInt();
+		f.setAnio(_anio);
+
+		boolean resp = f.fechaCorrecta();
+		if (resp == true) {
+			System.out.println("fecha correcta");
+		} else {
+			System.out.println("fecha incorrecta");
+		}
+
+		// int diasig = f.diaSiguiente();
+		// System.out.println("el dia siguiente es: " + diasig);
+		f.diaSiguiente();
+	}
+
+}
+
+
+Clase fecha
+
+public class Fecha {
+	private int dia;
+	private int mes;
+	private int anio;
+
+	// constructor
+	public Fecha() {
+
+	}
+
+	public Fecha(int d, int m, int a) {
+
+		this.dia = d;
+		this.mes = m;
+		this.anio = a;
+	}
+
+	// set y get
+	public void setDia(int d) {
+		this.dia = d;
+	}
+
+	public int getDia() {
+		return this.dia;
+	}
+
+	public void setMes(int m) {
+		this.mes = m;
+	}
+
+	public int getMes() {
+		return this.mes;
+	}
+
+	public void setAnio(int a) {
+		this.anio = a;
+	}
+
+	public int getAnio() {
+		return this.anio;
+	}
+
+	Boolean fechaCorrecta() {
+		if (this.mes == 1 || this.mes == 3 || this.mes == 5 || this.mes == 7 || this.mes == 8 || this.mes == 10
+				|| this.mes == 12) {
+			if (this.dia > 0 && this.dia <= 31) {
+				return true;
+			}
+		} else if (this.mes == 4 || this.mes == 6 || this.mes == 9 || this.mes == 11) {
+			if (this.dia > 0 && this.dia <= 30) {
+				return true;
+			}
+		} else if ((this.mes == 2) && (this.anio % 4 == 0 && this.anio % 100 != 0)
+				|| (this.anio % 100 == 0 && this.anio % 400 == 0)) {
+			if (this.dia > 0 && this.dia <= 28) {
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			return false;
+		}
+		return false;
+	}
+
+	void diaSiguiente() {
+		if (this.mes == 1 || this.mes == 3 || this.mes == 5 || this.mes == 7 || this.mes == 8 || this.mes == 10
+				|| this.mes == 12) {
+			for (int i = this.dia; i <= 31; i++) {
+				System.out.println("el dia siguiente es: " + i + "/" + this.mes + "/" + this.anio);
+			}
+		} else if (this.mes == 4 || this.mes == 6 || this.mes == 9 || this.mes == 11) {
+			for (int i = this.dia; i <= 30; i++) {
+				System.out.println("el dia siguiente es: " + i + "/" + this.mes + "/" + this.anio);
+			}
+		} else if ((this.mes == 2) && (this.anio % 4 == 0 && this.anio % 100 != 0)
+				|| (this.anio % 100 == 0 && this.anio % 400 == 0)) {
+			for (int i = this.dia; i < 30; i++) {
+				System.out.println("el dia siguiente es: " + i + "/" + this.mes + "/" + this.anio);
+			}
+		} else {
+			for (int i = this.dia; i <= 28; i++) {
+				System.out.println("el dia siguiente es: " + i + "/" + this.mes + "/" + this.anio);
+			}
+		}
+		// return this.dia;
+	}
+}

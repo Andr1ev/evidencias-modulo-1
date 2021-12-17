@@ -1,0 +1,207 @@
+
+
+suma separados
+
+inicio
+
+definir res=si. sumapar, sumaimpar, contarpar, contarimpar
+
+mientras (res == si)
+
+escribir "ingrese numero"
+
+n1 = leer numero
+
+si (n1%2 == 0)
+        sumapar = sumapar +n1
+        contarpar++
+sino        
+        sumaimpar = sumaimpar +n1
+        contarimpar++
+fin si
+
+escribir "desea ingresar nuevo numero? si/no"
+
+res = leer respuesta
+
+fin mientras
+
+escribir "los numero pares ingresados son" +contarpar "y la suma de pares es" +sumapar
+
+escribir "los numero impares ingresados son" +contarimpar "y la suma de impares es" +sumaimpar
+
+fin 
+
+suma juntos
+
+inicio
+
+definir res=si. suma, contarpar, contarimpar
+
+mientras (res == si)
+
+escribir "ingrese numero"
+
+n1 = leer numero
+
+suma=suma+n1
+
+si (n1%2 == 0)
+        contarpar++
+sino        
+       contarimpar++
+fin si
+
+escribir "desea ingresar nuevo numero? si/no"
+
+res = leer respuesta
+
+fin mientras
+
+fin 
+
+
+hacer-mientras
+
+inicio
+
+definir res. sumapar, sumaimpar, contarpar, contarimpar
+
+
+escribir "ingrese numero"
+
+n1 = leer numero
+
+si (n1%2 == 0)
+        sumapar = sumapar +n1
+        contarpar++
+sino        
+        sumaimpar = sumaimpar +n1
+        contarimpar++
+fin si
+
+escribir "desea ingresar nuevo numero? si/no"
+
+res = leer respuesta
+
+hasta (res == no)
+
+escribir "los numero pares ingresados son" +contarpar "y la suma de pares es" +sumapar
+
+escribir "los numero impares ingresados son" +contarimpar "y la suma de impares es" +sumaimpar
+
+fin 
+
+-----EJERCICIO 2 ------
+Sumar los números pares ingresados por el usuario:
+Variables: numero, cantidad_numero, total
+ 
+INICIO
+Escribir  “Cuantos números desea sumar?” = cantidad_numero
+Leer cantidad_numero
+Mientras cantidad_numero >= 0:
+               Si (numero%2 ==0):
+                              Total += numero
+                              cantidad_numero =-1
+
+
+
+
+
+
+ingresar cantidad numero, calcular suma pares y multiplicar impares
+
+variable cant_numeros
+variable i
+variable suma_pares
+variable mult_impares
+variable cont_pares
+variable cont_impares
+variable numero
+i=1
+numero=0
+suma_pares=0
+mult_impares=0
+cont_pares=0
+cont_impares=0
+
+escribir "ingrese cantidad de numeros a ingresar"
+leer cant_numeros
+
+mientras i<=cant_numeros
+escribir "ingrese un numero "
+leer numero
+si numero modulo 2 == 0 entonces
+	suma_pares=suma_pares+numero
+	cant_pares=cant_pares+1
+si no
+	mult_impares=mult_impares+numero
+	cant_impares=cant_impares+1
+	i=i+1
+fin si
+escribir "la suma de los pares es ",suma_pares
+escribir "la suma de los pares es ",suma_impares
+escribir "la suma de los pares es ",cant_pares
+escribir "la suma de los pares es ",cant_impares
+
+si cant_pares>cant_impares
+	escribir "fueron ingresados mas numeros pares
+si no
+	escribir "fueron ingresados mas numeros impares
+fin si
+
+
+
+
+
+determinar el mayor de N numeros
+
+variable numero
+variable i
+variable mayor
+mayor=0
+
+escribir "ingrese cantidad de numeros a ingresar"
+leer cant_numeros
+
+for (i=1,i<=cant_numeros;i++)
+	escribir "ingrese un numero "
+	leer numero
+
+si numero>mayor entonces
+	mayor=numero
+
+fin si
+
+escibir "el mayor numero ingresado fue ", mayor
+
+
+
+
+determinar el menor de N numeros
+
+
+inicio
+
+definir n1, menor=0
+
+
+escribir "ingrese numero"
+
+n1 = leer numero
+
+si (menor<=n1)
+        fin si
+sino        
+        menor=n1
+fin si
+
+escribir "desea ingresar nuevo numero? si/no"
+
+res = leer respuesta
+
+hasta (res == no)
+
+escribir "el numero menor es" +menor
+
+fin 

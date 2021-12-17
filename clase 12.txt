@@ -1,0 +1,172 @@
+EJERCICIO SUMA NUMERO
+
+package Clase12;
+
+import java.util.Scanner;
+
+public class SumaNumero {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+		int num, lim, i;
+
+		System.out.print("ingrese numero para calcular multiplos ");
+		num = leer.nextInt();
+		System.out.print("ingrese numero limite ");
+		lim = leer.nextInt();
+
+		if (num > lim) {
+			System.out.print("error en los datos ingresados ");
+		} else {
+
+			for (i = 1; i <= lim; i++) {
+				System.out.printf(" " + num + " %n");
+				num = +num;
+			}
+
+		}
+	}
+}
+
+EJERCICIO AUTOMENU
+
+package Clase12;
+
+import java.util.Scanner;
+
+public class AutoMenu {
+
+	public static void main(String[] args) {
+
+		int menu, mult = 1, sum = 0;// TODO Auto-generated method stub
+		do {
+			Scanner leer = new Scanner(System.in);
+			System.out.printf("Elija una opcion: ");
+			System.out.printf("%n1- Mostrar numero de 1 al 10");
+			System.out.printf("%n2- Multiplicar numeros de 1 al 10 ");
+			System.out.printf("%n3- Sumar numeros de 1 al 10 ");
+			System.out.printf("%n4- Salir ");
+			menu = leer.nextInt();
+
+			switch (menu) {
+			case 1:
+				for (int i = 1; i <= 10; i++) {
+					System.out.printf(" " + i + " %n");
+				}
+				break;
+			case 2:
+				for (int i = 1; i <= 10; i++) {
+					mult = mult * i;
+				}
+				System.out.printf("La multiplicacion es: " + mult + " %n");
+
+				break;
+			case 3:
+				for (int i = 1; i <= 10; i++) {
+					sum = sum + i;
+				}
+				System.out.printf("La suma es: " + sum + " %n");
+
+				break;
+			case 4:
+				break;
+			default:
+				System.out.print("opcion invalida %n");
+				break;
+			}
+		} while (menu != 4);
+		System.out.print("programa finalizado ");
+	}
+}
+
+EJERCICIO MULTIPLOS X NUMEROS
+
+package Clase12;
+
+import java.util.Scanner;
+
+public class MultiplosXNumeros {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+		int num, lim, mul, i, cont = 0;
+
+		System.out.print("ingrese cantidad numeros que desea calcular ");
+		lim = leer.nextInt();
+		System.out.print("ingrese multiplo que quiera buscar ");
+		mul = leer.nextInt();
+
+		for (i = 1; i <= lim; i++) {
+			System.out.printf("ingrese numero %n");
+			num = leer.nextInt();
+			if (num % mul == 0) {
+				cont++;
+			}
+
+		}
+		System.out.print("la cantidad de numeros multiplos es: " + cont);
+	}
+}
+
+EJERCICIO NUMEROS PRIMOS
+
+package Clase12;
+
+import java.util.Scanner;
+
+public class NumerosPrimos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+		int num, sum = 1;
+		char res;
+
+		do {
+			System.out.println("ingrese numero: ");
+			num = leer.nextInt();
+			if (num == 3 || num == 2) {
+				sum = sum * num;
+			} else if (num % 3 != 0 && num % 2 != 0) {
+				sum = sum * num;
+			}
+
+			System.out.println("Desea ingresar otro numero? s/n ");
+			res = leer.next().charAt(0);
+		} while (res == 's');
+		System.out.println("la multiplicacion es: " + sum);
+	}
+}
+
+EJERCICIO PARES E IMPARES
+
+package Clase12;
+
+import java.util.Scanner;
+
+public class ContarParesImpares {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+		int num, lim, mul, i, contp = 0, conti = 0;
+
+		System.out.print("ingrese cantidad numeros que desea calcular ");
+		lim = leer.nextInt();
+
+		for (i = 1; i <= lim; i++) {
+			System.out.printf("ingrese numero %n");
+			num = leer.nextInt();
+			if (num % 2 == 0) {
+				contp++;
+			} else
+				conti++;
+		}
+
+		System.out.printf("La cantidad de numeros pares es: " + contp);
+		System.out.printf("%nLa cantidad de numeros impares es: " + conti);
+
+	}
+}

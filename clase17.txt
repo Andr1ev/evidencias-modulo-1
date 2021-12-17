@@ -1,0 +1,124 @@
+en esta clase desarrollamos una calculadora con menú y clases, enviando los datos entre clases dependiendo la operacion
+
+
+
+Menu calculadora clases
+
+import java.util.Scanner;
+
+public class MenuMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int num1 = 8, num2 = 4;
+		int menu;
+		do {
+			Scanner leer = new Scanner(System.in);
+			System.out.println("Elija una opcion: ");
+			System.out.println("1- sumar");
+			System.out.println("2- Restar ");
+			System.out.println("3- Multiplicar ");
+			System.out.println("4- Dividir ");
+			System.out.println("5- Salir ");
+			menu = leer.nextInt();
+
+			switch (menu) {
+			case 1:
+
+				Suma sum = new Suma(num1, num2);
+
+				break;
+			case 2:
+
+				Resta resta = new Resta(num1, num2);
+
+				break;
+			case 3:
+
+				Multiplicacion mult = new Multiplicacion(num1, num2);
+
+				break;
+			case 4:
+
+				Division div = new Division(num1, num2);
+
+				break;
+			case 5:
+				break;
+			default:
+				System.out.print("opcion invalida %n");
+				break;
+			}
+		} while (menu != 5);
+		System.out.print("programa finalizado ");
+	}
+}
+
+Clase suma
+
+public class Suma {
+
+	int num1, num2;
+	int resp;
+
+	public Suma(int num1, int num2) {
+		resp = num1 + num2;
+		System.out.println("la suma es: " + resp);
+	}
+
+	public void mostrarResultado() {
+
+		System.out.println("el resultado es" + resp);
+	}
+}
+
+
+Clase resta
+
+public class Resta {
+	int num1, num2;
+	int resp;
+
+	public Resta(int num1, int num2) {
+		resp = num1 - num2;
+		System.out.println("la resta es: " + resp);
+	}
+}
+
+
+Clase multiplicacion
+
+public class Multiplicacion {
+
+	int num1, num2;
+	int resp;
+
+	public Multiplicacion(int num1, int num2) {
+		resp = num1 * num2;
+		System.out.println("la Multiplicacion es: " + resp);
+	}
+
+	public void mostrarResultado() {
+
+		System.out.println("el resultado es" + resp);
+	}
+}
+
+Clase division
+
+public class Division {
+
+	int num1, num2;
+	int resp;
+
+	public Division(int num1, int num2) {
+		resp = num1 / num2;
+		System.out.println("la Division es: " + resp);
+	}
+
+	public void mostrarResultado() {
+
+		System.out.println("el resultado es" + resp);
+	}
+}

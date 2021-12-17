@@ -1,0 +1,119 @@
+EJERCICIO CAMBIAR VALORES
+
+package clase10;
+
+import java.util.Scanner;
+
+public class CambiarValores {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+
+		int a, b, c;
+		System.out.print("ingresar valor 1");
+		a = leer.nextInt();
+		System.out.print("ingresar valor 2");
+		b = leer.nextInt();
+
+		c = a;
+		a = b;
+		b = c;
+
+		System.out.printf("A vale: " + a + "%nB vale: " + b);
+	}
+}
+
+EJERCICIO NUMERO MAYOR
+
+package clase10;
+
+import java.util.Scanner;
+
+public class NumMayor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+		int a, b;
+		System.out.print("ingrese valor 1");
+		a = leer.nextInt();
+		System.out.print("ingrese valor 2");
+		b = leer.nextInt();
+
+		if (a > b) {
+			System.out.print("el valor mayor es " + a);
+		} else if (a < b) {
+			System.out.print("el valor mayor es" + b);
+		} else {
+			System.out.print("ambos numeros son iguales");
+		}
+	}
+}
+
+
+EJERCICIO PROMEDIO
+
+package clase10;
+
+public class promedio {
+
+	public static void main(String[] args) {
+
+		int a = 25;
+		int b = 10;
+		int c = 13;
+		int d = 19;
+
+		float prom = (a + b + c + d) / 4;
+
+		System.out.print("el promedio de las notas es: " + prom);
+
+	}
+}
+
+EJERCICIO SENTENCIA IF
+
+package clase10;
+
+import java.util.Scanner;
+
+public class SentenciaIf {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+		int numero;
+		System.out.print("ingrese valor");
+		numero = leer.nextInt();
+
+		if (numero > 0) {
+			System.out.print("el valor es mayor a cero");
+		} else {
+			System.out.print("el valor es menor a cero");
+		}
+
+	}
+}
+
+
+EJERCICIO OPERADORES
+
+public class Operadores {
+	
+	public static void main(String[] args) {
+	
+	int a = 25;
+	int b = 10;
+	
+	int sum=a+b;
+	int resta=a-b;
+	int mult=a*b;
+	int div = a/b;
+	
+	System.out.print("la suma de a+b es: " +sum); 
+	System.out.print("la resta de a-b es: " +resta);
+	System.out.print("la multiplicacion de a*b es: " +mult);		
+	System.out.print("la division de a/b es: " +div);
+}
+}

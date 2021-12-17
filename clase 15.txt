@@ -1,0 +1,117 @@
+EJERCICIO CAJERO AUTOMATICO
+
+
+import java.util.Scanner;
+
+public class Cajero {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		float num1;//
+		int saldo = 500000, menu;
+		do {
+			Scanner leer = new Scanner(System.in);
+			System.out.println("Elija una opcion: ");
+			System.out.println("1- Consultar Saldo");
+			System.out.println("2- Realizar Abono/Deposito ");
+			System.out.println("3- Realizar Giro ");
+			System.out.println("4- Salir ");
+
+			menu = leer.nextInt();
+
+			switch (menu) {
+			case 1:
+				System.out.printf("Su saldo actual es: " + saldo + " %n");
+				break;
+			case 2:
+				System.out.print("Ingrese monto a depositar: ");
+				num1 = leer.nextFloat();
+				if (num1 > 0) {
+					saldo += num1;
+					System.out.printf("Su saldo actual es: " + saldo + " %n");
+				} else {
+					System.out.printf("la cantidad ingresada es incorrecta " + " %n");
+				}
+				break;
+			case 3:
+				System.out.print("Ingrese monto a retirar: ");
+				num1 = leer.nextFloat();
+				if (num1 <= saldo) {
+					saldo -= num1;
+					System.out.printf("Ha retirado: " + num1 + " %n");
+					System.out.printf("Su saldo actual es: " + saldo + " %n");
+				} else {
+					System.out.printf("No puede retirar mas de su saldo " + saldo + " %n");
+				}
+				break;
+			case 4:
+				break;
+			default:
+				System.out.printf("opcion invalida %n");
+				break;
+			}
+		} while (menu != 4);
+		System.out.println("programa finalizado ");
+	}
+}
+
+
+
+
+
+EJERCICIO CALCULADORA
+
+
+import java.util.Scanner;
+
+public class calculadora {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		float num1, num2;//
+		int menu;
+		do {
+			Scanner leer = new Scanner(System.in);
+			System.out.println("Elija una opcion: ");
+			System.out.println("1- Sumar");
+			System.out.println("2- Restar ");
+			System.out.println("3- Multiplicar ");
+			System.out.println("4- Dividir ");
+			System.out.println("5- Salir ");
+			menu = leer.nextInt();
+
+			System.out.print("ingrese numero: ");
+			num1 = leer.nextFloat();
+			System.out.print("ingrese numero: ");
+			num2 = leer.nextFloat();
+
+			switch (menu) {
+			case 1:
+				System.out.printf("La suma es: " + (num1 + num2) + " %n");
+				break;
+			case 2:
+				System.out.printf("La resta es: " + (num1 - num2) + " %n");
+
+				break;
+			case 3:
+				System.out.printf("La multiplicacion es: " + (num1 * num2) + " %n");
+
+				break;
+			case 4:
+				float div = num1 / num2;
+				System.out.printf("La division es: " + div + " %n");
+				break;
+			case 5:
+				break;
+			default:
+				System.out.print("opcion invalida %n");
+				break;
+			}
+		} while (menu != 5);
+		System.out.print("programa finalizado ");
+	}
+}
+
+
+

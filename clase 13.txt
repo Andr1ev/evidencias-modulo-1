@@ -1,0 +1,72 @@
+EJERCICIO SUMA PARES MULTIPLICAR IMPARES
+
+package Clase13;
+
+import java.util.Scanner;
+
+public class SumayMultiplicar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner leer = new Scanner(System.in);
+		int num, lim, mul = 1, i, contp = 0, conti = 0, sum = 0;
+
+		System.out.print("ingrese cantidad numeros que desea calcular ");
+		lim = leer.nextInt();
+
+		for (i = 1; i <= lim; i++) {
+			System.out.printf("ingrese numero %n");
+			num = leer.nextInt();
+			if (num % 2 == 0) {
+				contp++;
+				sum = sum + num;
+			} else {
+				mul = mul * num;
+				conti++;
+
+			}
+		}
+		System.out.printf("La suma de los numeros pares es: " + sum);
+		System.out.printf("%nLa multiplicacion de los numeros impares es: " + mul);
+
+		if (contp > conti) {
+			System.out.printf("%nfueron ingresados mas numeros pares: " + contp);
+		} else {
+			System.out.printf("%nfueron ingresados mas numeros impares: " + conti);
+		}
+	}
+}
+
+
+
+
+EJERCICIO MAYOR DE N NUMEROS
+
+package Clase13;
+
+import java.util.Scanner;
+
+public class MayorNNumero {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner leer = new Scanner(System.in);
+
+		int aux = 0, num;
+		char res;
+		do {
+
+			System.out.println("ingrese numero: ");
+			num = leer.nextInt();
+			if (aux < num) {
+				aux = num;
+			}
+			System.out.println("Desea ingresar otro numero? s/n ");
+			res = leer.next().charAt(0);
+		} while (res == 's');
+		System.out.println("el numero mayor es " + aux);
+	}
+
+}

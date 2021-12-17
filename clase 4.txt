@@ -1,0 +1,155 @@
+definir n1, n2
+
+escribir "ingrese nota 1"
+n1= leer nota 1
+escribir "ingrese nota 2"
+n2= leer nota 2
+
+ resultado = n1 + n2
+ 
+escribir: "La suma es: " + resultado
+
+--------------------------------------------
+
+definir n1, n2, n3
+
+escribir "ingrese nota 1"
+n1= leer nota 1
+escribir "ingrese nota 2"
+n2= leer nota 2
+escribir "ingrese nota 3"
+n3= leer nota 3
+
+promedio = (n1+n2+n3) / 3
+
+escribir: "el promedio es" + promedio
+--------------------------------------------
+
+definir n1
+
+escribir "ingrese numero"
+n1= leer numero
+cuadrado = n1^2
+escribir: "el cuadrado del numero es" + cuadrado
+
+
+
+
+
+
+
+
+
+
+
+definir capital, ganancia
+
+escribir "ingrese capital"
+capital = leer capital
+
+ganancia = capital*0.02
+
+escribir "la ganancia sera de" + ganancia
+
+
+
+
+
+un vendedor recibe un sueldo base de mas un 10% de comision de sus ventas, el vendedor desea saber cuanto dinero obtendra por concepto de comisiones por tres ventas que realiza en el mes y el total que recibira en el mes tomando en cuenta su sueldo base y comisiones
+var
+Definir venta1, venta2, venta3, comision, sueldo Como Real
+Escribir " Escribe las 3 ventas del mes"
+leer venta1, venta2,venta 3
+Escribir "Escribe el sueldo base"
+leer sueldo
+comision = (venta1 + venta2 + venta3) * .10
+Escribir "El sueldo base es: $", sueldo
+Escribir "La comision del mes es: $", comision
+Escribir "El sueldo total del mes es: $", sueldo + comision
+Fin Algoritmo
+
+
+
+
+1.Realizar un algoritmo en pseudocódigo que pida ingresar el modelo y marca de un vehículo y muestre por pantalla los datos ingresados.
+
+Variables: Modelo y Marca
+Inicio 
+
+1- Iniciar variables Modelo, Marca
+
+2- Solicitar Introduccion de dos valores Mo y Ma
+
+3- Leer Valores 
+
+4- Asignar a variables A=Mo y B=Ma
+
+5- Si A <=/=> B 
+Entonces. Vuelve Paso Iniciar 1.
+print ("Marca y modelo no coinciden.")
+
+6 Si A <=> B (ambos verdaderos)
+Entonces.si cumple
+print ("datos ingresados")
+
+7 Fin.Si
+
+8. Fin
+
+
+
+2. Realizar un algoritmo en pseudocodigo que calcule el porcentaje solicitado de un número ingresado:
+    
+
+Variables: núm, porcentaje
+inicio
+definir num, porcentaje
+escribir"ingrese numero"
+num = leer numero
+escribir"ingrese porcentaje"
+porcentaje = leer porcentaje
+
+porcentaje=pocentaje/100
+
+escribir "el porcentaje del numero es" + numero*porcentaje
+
+fin
+
+
+
+
+inicio
+
+definir a, b , c
+
+escribir"ingrese valor 1"
+a = leer valor
+escribir"ingrese valor 2"
+b = leer valor
+
+c=a
+a=b
+b=c
+
+escribir "ahora los valores son" +a y +b
+
+fin
+
+
+inicio
+
+definir a, b
+
+escribir"ingrese valor 1"
+a = leer valor
+escribir"ingrese valor 2"
+b = leer valor
+
+a=a+b
+b=a-b
+a=a-b
+
+
+escribir "ahora los valores son" +a y +b
+
+fin

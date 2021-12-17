@@ -1,0 +1,23 @@
+
+Ejercicio sandwich
+
+entrada: -pan
+	 -pollo
+	 -queso
+	 -jamon
+	 -salsas
+
+salida : -sandwich
+
+algoritmo
+
+encender cocina
+poner sarten con aceite
+freír jamón
+freír pollo
+cortar el pan y tostar
+agregar el queso al pollo
+agregar salsas al pan
+agregar pollo y jamón
+servir sandwich
+

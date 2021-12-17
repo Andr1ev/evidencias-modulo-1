@@ -1,0 +1,257 @@
+ejercicio promedio N notas
+
+package Clase11;
+
+import java.util.Scanner;
+
+public class PromedioNNotas {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner leer = new Scanner(System.in);
+
+		int sum = 0, nota, i = 0;
+		char res;
+		do {
+			i++;
+			System.out.println("ingrese nota: ");
+			nota = leer.nextInt();
+			sum = sum + nota;
+			System.out.println("Desea ingresar otra nota? s/n ");
+			res = leer.next().charAt(0);
+		} while (res == 's');
+		System.out.println("el promedio es " + sum / i);
+	}
+
+}
+
+
+EJERCICIO LA LANGOSTA AHUMADA
+
+package Clase11;
+
+import java.util.Scanner;
+
+public class LaLangostaAhumada {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+		int num;
+		System.out.print("ingrese numero de personas ");
+		num = leer.nextInt();
+
+		if (num < 200) {
+			System.out.print("el costo del banquete es de: " + num * 9500);
+		} else if (num > 200 && num <= 300) {
+			System.out.print("el costo del banquete es de: " + num * 8500);
+		} else {
+			System.out.print("el costo del banquete es de: " + num * 7500 + "");
+		}
+	}
+}
+
+
+EJERCICIO TELEFONICA
+
+
+package Clase11;
+
+import java.util.Scanner;
+
+public class Telefonica {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+
+		int min;
+		String dia, turno;
+		System.out.println("ingrese minutos ");
+		min = leer.nextInt();
+		System.out.println("ingresar dia ");
+		dia = leer.next();
+		System.out.println("ingresar turno ");
+		turno = leer.next();
+
+		if (dia != "domingo") {
+			switch (turno) {
+			case "diurno":
+				if (min < 5) {
+					min = min * 100;
+					System.out.print("el valor total es: " + min * 1.15);
+				} else if (min <= 8 && min > 5) {
+					min = ((min - 5) * 80) + 500;
+					System.out.print("el valor total es: " + min * 1.15);
+				} else if (min <= 10 && min > 8) {
+					min = ((min - 5) * 70) + 740;
+					System.out.print("el valor total es: " + min * 1.15);
+				} else if (min > 10) {
+					min = ((min - 5) * 50) + 880;
+					System.out.print("el valor total es: " + min * 1.15);
+				}
+				break;
+			case "vespertino":
+				if (min < 5) {
+					min = min * 100;
+					System.out.print("el valor total es: " + min * 1.1);
+				} else if (min <= 8 && min > 5) {
+					min = ((min - 5) * 80) + 500;
+					System.out.print("el valor total es: " + min * 1.1);
+				} else if (min <= 10 && min > 8) {
+					min = ((min - 5) * 70) + 740;
+					System.out.print("el valor total es: " + min * 1.1);
+				} else if (min > 10) {
+					min = ((min - 5) * 50) + 880;
+					System.out.print("el valor total es: " + min * 1.1);
+				}
+				break;
+			}
+		} else if (dia == "domingo") {
+			if (min < 5) {
+				min = min * 100;
+				System.out.print("el valor total es: " + min * 1.03);
+			} else if (min <= 8 && min > 5) {
+				min = ((min - 5) * 80) + 500;
+				System.out.print("el valor total es: " + min * 1.03);
+			} else if (min <= 10 && min > 8) {
+				min = ((min - 5) * 70) + 740;
+				System.out.print("el valor total es: " + min * 1.03);
+			} else if (min > 10) {
+				min = ((min - 5) * 50) + 880;
+				System.out.print("el valor total es: " + min * 1.03);
+			}
+
+		}
+	}
+
+}
+
+
+
+EJERCICIO VIAJE ESTUDIOS
+
+package Clase11;
+
+import java.util.Scanner;
+
+public class ViajeEstudios {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+		int alum;
+		System.out.print("ingrese numero alumnos ");
+		alum = leer.nextInt();
+
+		if (alum < 30) {
+			System.out.print("el arriendo es 400000 y el pago por alumno es : " + 400000 / alum);
+		} else if (alum >= 30 && alum < 50) {
+			System.out.print("el pago por alumno es 9500 y el costo total es : " + 9500 * alum);
+		} else if (alum >= 50 && alum < 100) {
+			System.out.print("el pago por alumno es 7000 y el costo total es : " + 7000 * alum);
+		} else if (alum > 100) {
+			System.out.print("el pago por alumno es 6500 y el costo total es : " + 6500 * alum);
+		}
+	}
+}
+
+
+
+
+EJERCICIO VIAJE ESTUDIOS SWITCH
+
+package Clase11;
+
+import java.util.Scanner;
+
+public class ViajeEstudiosSwitch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+		int menu, alum;
+		System.out.printf("si alumnos menor 30 ingrese 1 ");
+		System.out.printf("%nsi alumnos entre 30 y 49 ingrese 2 ");
+		System.out.printf("%nsi alumnos entre 50 y 99 ingrese 3 ");
+		System.out.printf("%nsi alumnos 100 o mayor ingrese 4 ");
+		menu = leer.nextInt();
+
+		switch (menu) {
+		case 1:
+			System.out.print("ingrese numero alumno ");
+			alum = leer.nextInt();
+			System.out.print("el arriendo es 400000 y el pago por alumno es : " + 400000 / alum);
+			break;
+		case 2:
+			System.out.print("ingrese numero alumno ");
+			alum = leer.nextInt();
+			System.out.print("el pago por alumno es 9500 y el costo total es : " + 9500 * alum);
+			break;
+		case 3:
+			System.out.print("ingrese numero alumno ");
+			alum = leer.nextInt();
+			System.out.print("el pago por alumno es 7000 y el costo total es : " + 7000 * alum);
+			break;
+		case 4:
+			System.out.print("ingrese numero alumno ");
+			alum = leer.nextInt();
+			System.out.print("el pago por alumno es 6500 y el costo total es : " + 6500 * alum);
+			break;
+		default:
+			System.out.print("opcion invalida ");
+			break;
+		}
+	}
+
+}
+
+
+
+EJERCICIO VINICULTORES
+
+package Clase11;
+
+import java.util.Scanner;
+
+public class Vinicultores {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+		int tamaño, kilo, precio, sum;
+
+		System.out.print("ingrese tipo ");
+		char tipo = leer.next().charAt(0);
+		System.out.print("ingrese tamaño ");
+		tamaño = leer.nextInt();
+		System.out.print("ingrese peso kilo ");
+		kilo = leer.nextInt();
+		System.out.print("ingrese precio ");
+		precio = leer.nextInt();
+
+		if (tipo == 'a') {
+			if (tamaño == 1) {
+				kilo = kilo * 20;
+				sum = precio + kilo;
+				System.out.print("el costo total es: " + sum + " con una ganancia de " + kilo);
+			} else {
+				kilo = kilo * 30;
+				sum = precio + kilo;
+				System.out.print("el costo total es: " + sum + " con una ganancia de " + kilo);
+			}
+		} else if (tipo == 'b') {
+			if (tamaño == 1) {
+				kilo = kilo * 30;
+				sum = precio - kilo;
+				System.out.print("el costo total es: " + sum + " con una ganancia de " + kilo);
+			} else {
+				kilo = kilo * 50;
+				sum = precio - kilo;
+				System.out.print("el costo total es: " + sum + " con una ganancia de " + kilo);
+			}
+		}
+	}
+}
+

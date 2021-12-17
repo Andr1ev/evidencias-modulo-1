@@ -1,0 +1,98 @@
+EJERCICIO VERIFICAR HORA
+
+
+import java.util.Scanner;
+
+public class VerificarHora {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+		int hor, min, sec;
+
+		System.out.print("ingrese hora formato HH:MM:SS: ");
+		String hora = leer.nextLine();
+		String hora2[] = hora.split(":");
+		hor = Integer.parseInt(hora2[0]);
+		min = Integer.parseInt(hora2[1]);
+		sec = Integer.parseInt(hora2[2]);
+
+		if (hor == 24) {
+			if (min > 00 || sec > 00) {
+				System.out.print("la hora ingresada es incorrecta ");
+
+			}
+		} else if ((hor >= 0 && hor < 24) && (min >= 0 && min <= 59) && (sec >= 0 && sec <= 59)) {
+			System.out.print("la hora ingresada es correcta ");
+		} else {
+			System.out.print("la hora ingresada es incorrecta ");
+		}
+	}
+}
+
+
+
+
+EJERCICIO FIBONACCI
+
+
+
+
+import java.util.Scanner;
+
+public class Fibonacci {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+		int aux = 0, lim, aux2 = 1, i, cont = 1;
+
+		System.out.print("ingrese numero a calcular ");
+		lim = leer.nextInt();
+
+		System.out.print(+aux + ",");
+		for (i = 1; i < lim; i++) {
+			System.out.print(+cont + ",");
+			cont = aux + aux2;
+			aux = aux2;
+			aux2 = cont;
+		}
+	}
+
+}
+
+
+EJERCICIO METODO BURBUJA
+
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class OrdenarNumerosBurbuja {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arreglo = new int[10];
+		int aux = 0;
+		Scanner leer = new Scanner(System.in);
+
+		for (int i = 0; i < 10; i++) {
+			System.out.print("ingrese numero: ");
+			arreglo[i] = leer.nextInt();
+		}
+
+		for (int i = 0; i < arreglo.length; i++) {
+			for (int j = 1; j < (arreglo.length - i); j++) {
+				if (arreglo[j - 1] > arreglo[j]) {
+					aux = arreglo[j - 1];
+					arreglo[j - 1] = arreglo[j];
+					arreglo[j] = aux;
+
+				}
+
+			}
+		}
+
+		System.out.println(Arrays.toString(arreglo));
+	}
+}

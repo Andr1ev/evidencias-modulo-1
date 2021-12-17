@@ -1,0 +1,113 @@
+
+Clase persona
+
+abstract class Persona {
+	private int altura;
+	private int edad;
+	private double peso;
+
+	Persona() {
+	}
+
+	// constructor
+	Persona(int a, int e, double p) {
+		this.altura = a;
+		this.edad = e;
+		this.peso = p;
+	}
+
+	// constructor objeto
+	Persona(Persona p) {
+		altura = p.altura;
+		edad = p.edad;
+		peso = p.peso;
+	}
+
+	// set y get
+
+	public void setAltura(int a) {
+		this.altura = a;
+	}
+
+	public int getAltura() {
+		return this.altura;
+	}
+
+	public void setEdad(int e) {
+		this.edad = e;
+	}
+
+	public int getEdad() {
+		return this.edad;
+	}
+
+	public void setPeso(Double p) {
+		this.peso = p;
+	}
+
+	public double getPeso() {
+		return this.peso;
+	}
+
+	// metodo abstracto
+	abstract double calcularCaloria();
+}
+
+
+
+Calculo hombre 
+
+public class Hombre extends Persona {
+
+	Hombre() {
+		super();
+	}
+
+	Hombre(int a, int e, double p) {
+		super(a, e, p);
+
+	}
+
+	Hombre(Hombre h) {
+		super(h);
+	}
+
+	@Override
+	double calcularCaloria() {
+
+		return 66 + (getAltura() * 5) + (getPeso() * 13.7) - (getEdad() * 6.8);
+	}
+
+}
+
+
+Calculo mujer
+
+public class Mujer extends Persona {
+
+	public Mujer() {
+		super();
+	}
+
+	Mujer(int a, int e, double p) {
+		super(a, e, p);
+
+	}
+
+	Mujer(Mujer m) {
+		super(m);
+	}
+
+	@Override
+	double calcularCaloria() {
+
+		return 655 + (getAltura() * 1.8) + (getPeso() * 9.6) - (getEdad() * 4.7);
+	}
+
+	public static void main(String[] args) {
+
+		Persona per[] = new Persona;
+		per = new Hombre(185,26,78);
+	}
+
+}

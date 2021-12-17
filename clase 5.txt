@@ -1,0 +1,133 @@
+Ejercicios 
+
+1)Crear algortimos para resolver los siguientes problemas
+determinar si un numero ingresado es par o impar
+
+inicio
+
+variable
+numero = X
+---------------
+si (X%2==0)
+   escribir"el numero es par"
+sino 
+   escribir"es impar"
+fin si
+   
+
+2) Determinar si un numero ingresado es multiplo o no de 2
+
+inicio
+
+variable
+numero = X
+---------------
+si (X%2==0)
+   escribir"el numero es multiplo de 2"
+sino 
+   escribir" el número no es multiplo de 2"
+fin si
+
+
+3) Determinar si un numero ingresado es multiplo o no de 3
+
+inicio
+
+definir num
+
+escribir"ingrese numero"
+num = leer numero
+
+si(num mod 3 == 0)
+        escribir: "el número es multiplo de 3"
+        
+sino
+        escribir: "el número no es multiplo de 3"
+
+fin si
+
+fin
+
+
+
+
+- ingresar 2 numero y ver cual es el mayor
+
+inicio
+
+definir n1, n2
+
+escribir"ingrese numero"
+n1 = leer numero
+
+escribir"ingrese numero"
+n2 = leer numero
+
+si(n1 > n2)
+        escribir: "el número mayor es" + n1
+        
+sino si (n1 < n2)
+        escribir: "el número mayor es" + n2
+
+sino
+	escribir "ambos numeros son iguales" 
+
+fin si
+
+fin
+
+- ingresar 3 numero y ver cual es el mayor
+
+
+si (n1==n2) && (n1==n3)
+	"Escribir el numero mayor es" +n1
+
+sino si (n1==n2)
+	si(n1 > n3)
+		Escribir: "el número mayor es" +n1
+
+		Sino  	escribir: "el número mayor es" +n3
+        
+sino si (n1==n3)
+	 si (n1 > n2) 
+   	   	Escribir: "el número mayor es" +n1
+
+		Sino  	escribir: "el número mayor es" +n2
+sino si (n2==n3)
+	 si (n2 > n1) 
+   	   	Escribir: "el número mayor es" +n2
+
+		Sino  	escribir: "el número mayor es" +n1
+
+
+
+
+ingresar 2 numeros y realizar operacion
+
+inicio
+
+definir n1, n2, operacion
+
+escribir"ingrese numero"
+n1 = leer numero
+escribir"ingrese numero"
+n2 = leer numero
+escribir"ingrese operacion"
+operacion = leer operacion
+
+segun operacion hacer
+
+	caso = suma 
+		escribir "la suma es " + n1+n2 
+	caso = resta
+		escribir "la resta es" + n1-n2
+	caso = multiplicar
+		escribir "la multiplicacion es" + n1*n2
+	caso = dividir
+		escribir "la division es" + n1/n2
+fin
+
+	
+
+
+

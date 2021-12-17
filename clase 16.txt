@@ -1,0 +1,212 @@
+EJERCICIO ARREGLO N NUMEROS
+
+
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ArregloNNumeros {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+		int lim;
+		System.out.print("ingrese total de numeros: ");
+		lim = leer.nextInt();
+
+		int[] arreglo = new int[lim];
+
+		for (int i = 0; i < lim; i++) {
+			System.out.print("ingrese numero: ");
+			arreglo[i] = leer.nextInt();
+		}
+		System.out.print("Los numeros ingresados son ");
+		System.out.println(Arrays.toString(arreglo));
+	}
+
+}
+
+
+
+
+EJERCICIO MOSTRAR ARREGLO
+
+
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class MostrarArreglo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+
+		int[] arreglo = new int[10];
+
+		for (int i = 0; i < 10; i++) {
+			System.out.print("ingrese numero: ");
+			arreglo[i] = leer.nextInt();
+		}
+		System.out.print("Los numeros ingresados son ");
+		System.out.println(Arrays.toString(arreglo));
+	}
+
+}
+
+
+
+EJERCICIO NUMERO PERFECTO
+
+
+
+import java.util.Scanner;
+
+public class NumeroPerfecto {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+
+		int num, sum = 0;
+
+		do {
+			System.out.print("ingrese numero: ");
+			num = leer.nextInt();
+			sum = 0;
+			for (int i = 1; i < num; i++) {
+				if (num % i == 0) {
+					sum += i;
+				}
+			}
+			if (sum == num) {
+				System.out.println("el numero " + num + " es perfecto");
+			} else {
+				System.out.println("el numero " + num + " no es perfecto");
+			}
+		} while (num != 0);
+	}
+}
+
+
+
+
+EJERCICIO SUMAR ARREGLO
+
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class SumarArreglo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+		int lim, sum = 0;
+		System.out.print("ingrese total de numeros: ");
+		lim = leer.nextInt();
+
+		int[] arreglo = new int[lim];
+
+		for (int i = 0; i < lim; i++) {
+			System.out.print("ingrese numero: ");
+			arreglo[i] = leer.nextInt();
+			sum += arreglo[i];
+		}
+		System.out.print("Los numeros ingresados son ");
+		System.out.println(Arrays.toString(arreglo));
+		System.out.println("Y la suma es: " + sum);
+	}
+
+}
+
+
+
+EJERCICIO SUMAR NUMEROS ENTRE 2 ARREGLOS
+
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Suma2Arreglos {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner leer = new Scanner(System.in);
+		int lim, sum = 0;
+		System.out.print("ingrese total de numeros: ");
+		lim = leer.nextInt();
+
+		int[] arreglo = new int[lim];
+		int[] arreglo2 = new int[lim];
+		int[] suma = new int[lim];
+
+		for (int i = 0; i < lim; i++) {
+			System.out.print("ingrese numero arreglo 1: ");
+			arreglo[i] = leer.nextInt();
+		}
+		for (int i = 0; i < lim; i++) {
+			System.out.print("ingrese numero arreglo 2: ");
+			arreglo2[i] = leer.nextInt();
+		}
+		for (int i = 0; i < lim; i++) {
+
+			suma[i] = (arreglo[i] + arreglo2[i]);
+
+		}
+		System.out.println("Los numeros ingresados son ");
+		System.out.println(Arrays.toString(arreglo));
+		System.out.println(Arrays.toString(arreglo2));
+		System.out.println("Y la suma es: ");
+		System.out.println(Arrays.toString(suma));
+	}
+
+}
+
+
+
+
+EJERCICIO ORDENAR Y BUSCAR
+
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class OrdenarYBuscar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] arreglo = new int[10];
+		int aux = 0, num;
+		Scanner leer = new Scanner(System.in);
+
+		for (int i = 0; i < 10; i++) {
+			System.out.print("ingrese numero: ");
+			arreglo[i] = leer.nextInt();
+		}
+
+		for (int i = 0; i < arreglo.length; i++) {
+			for (int j = 1; j < (arreglo.length - i); j++) {
+				if (arreglo[j - 1] > arreglo[j]) {
+					aux = arreglo[j - 1];
+					arreglo[j - 1] = arreglo[j];
+					arreglo[j] = aux;
+
+				}
+
+			}
+		}
+		System.out.println(Arrays.toString(arreglo));
+
+		System.out.println("ingrese numero a buscar: ");
+		num = leer.nextInt();
+		aux = Arrays.binarySearch(arreglo, num);
+		if (aux < 0) {
+			System.out.println("el numero buscado no existe");
+		} else {
+			System.out.println("el numero buscado existe en la posicion " + aux);
+		}
+		
+	}
+}

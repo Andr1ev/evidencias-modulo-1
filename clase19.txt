@@ -1,0 +1,51 @@
+en esta clase vimos materia relacionada a los requerimientos con un ejercicio final para desarrollar durante el dia
+-requerimientos
+-principios solid
+-diagramas de clase
+
+
+Crea una clase llamada Contador que contenga un único atributo entero llamado cont.
+La clase tendrá los siguientes constructores:
+
+- Constructor por defecto
+- Constructor con parámetros para inicializar el contador con un valor no negativo.
+
+Si el valor inicial que se recibe es negativo, el contador tomará l valor cero
+como valor inigial.
+
+Además de los métodos getter y setter,
+la clase contendrá los métodos:
+
+- incrementar: incrementa el contador en una unidad.
+- decrementar: decrementa el contador en una unidad.
+
+El contador nunca podrá tener un valro negativo. Si al decrementar se alcanza
+un valor negativo, el contador toma el valor cero. Una vez creada la clase,
+escribe un método main para probarla.
+
+package Clase19;
+
+public class Contador {
+
+	private int cont;
+
+	// constructor
+	public Contador() {
+	}
+
+	Contador(int a) {
+		this.cont = a;
+
+	}
+
+	// set y get
+
+	public void setContador(int cont) {
+		this.cont = cont;
+	}
+
+	public int getContador() {
+		return cont;
+	}
+
+}

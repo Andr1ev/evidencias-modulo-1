@@ -1,0 +1,82 @@
+Ejercicio compra tienda virtual
+
+entradas:
+	-navegador
+	-productos
+	-celular
+	-datos usuario
+
+proceso:
+	-ingresar al sitio web de la compra
+	-logearse en el sitio
+	-realizar busqueda de los productos
+	-seleccionar productos
+	-agregar productos al carro de compras
+	-ingresar al carro de compras
+	-confirmar productos
+	-confirmar datos del usuario
+	-realizar compra
+	-confirmar que la compra fue exitosa
+	-salir del sitio
+
+salida:
+	-compra de los productos
+
+
+
+Ejercicio 3
+
+
+algoritmo
+
+constante:
+	-datos usuario string(nombre-rut-direccion-email-telefono)
+variables:
+	-datos login pagina string(rut-contraseña)
+	-datos login banco string(rut-contraseña)
+
+
+proceso:
+	-ingresar al sitio web de la compra
+	-logearse en el sitio (datos login pagina)
+
+ciclo:	-realizar busqueda de los productos
+	-seleccionar productos
+	-agregar productos al carro de compras
+fin ciclo (agregar mas productos?)
+
+	-ingresar al carro de compras
+	-confirmar productos
+	-confirmar datos del usuario(datos usuario)
+	-realizar compra
+	-ingresar datos de pago (datos login banco)
+	-confirmar que la compra fue exitosa
+	-salir del sitio
+fin proceso
+
+
+
+algoritmo liquidacion de sueldo
+boleta honorarios electronica
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

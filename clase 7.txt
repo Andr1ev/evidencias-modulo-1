@@ -1,0 +1,96 @@
+Inicio
+Definir cantidad
+Escribir ingrese cantidad lapices
+Leer cantidad
+	Si cantidad >= 1000 Entonces
+		Escribir "el valor total es" +cantidad*85
+	SiNo
+		Escribir "el valor total" es +cantidad*90
+	Fin Si
+Fin
+
+
+
+
+ejercicio traje
+
+Inicio
+Definir precio, desc
+
+Escribir ingrese precio traje
+Leer precio
+	Si precio>250000 Entonces
+		desc=precio*0.15
+		Escribir "el valor total es" +precio-desc "con un descuento de" +desc
+	SiNo
+		desc=precio*0.08
+		Escribir "el valor total es" +precio-desc "con un descuento de" +desc
+	FinSi
+Fin
+
+
+ejercicio restaurant
+
+Inicio
+Declarar numero
+Escribir "ingrese numero de personas"
+Leer numero
+	Si numero <= 200 Entonces
+		Escribir "el costo del banquete es de numero*9500"
+	SiNo
+		Si numero > 200 & numero <= 300 entonces
+			Escribir "el costo del banquete es de numero*8500"
+		FinSi
+	SiNo
+		Escribir "el costo del banquete es de numero*7500"
+	FinSi
+Fin
+
+
+ejercicio uvas
+
+Algoritmo sin_titulo
+	Escribir 'ingrese tipo, tamaño y kilo de uva'
+	Leer tipo, tamaño, kilo, precio
+	Si tipo == a
+		Si tamaño == 1
+			kilo = kilo*20
+			Escribir 'el costo total es " precio+kilo "con una ganancia de" +kilo
+		SiNo
+			kilo = kilo*30
+			Escribir 'el costo total es " precio+kilo "con una ganancia de" +kilo
+		FinSi
+	SiNo
+		Si tamaño == 1
+			kilo = kilo*30
+			Escribir 'el costo total es " precio-kilo "con una ganancia de" +kilo
+		SiNo
+			kilo = kilo*50
+			Escribir 'el costo total es " precio-kilo "con una ganancia de" +kilo
+		FinSi
+	FinSi
+FinAlgoritmo
+
+
+
+
+Ejercicio autobus
+
+Inicio
+	Escribir 'ingrese alumnos'
+	Leer alumno
+	Segun alumno Hacer
+		"alumno < 30":
+			Escribir "el arriendo es 400000 y el pago por alumno es" 400000/alumno
+		"alumno >= 30 y <50":
+			Escribir "el pago por alumno es 9500 y el costo total es" 9500*alumno
+		"alumno >= 50 y <100":
+			Escribir "el pago por alumno es 7000 y el costo total es" 7500*alumno
+		"alumno >= 100":
+			Escribir "el pago por alumno es 6500 y el costo total es" 6500*alumno
+	FinSegun
+Fin
+
+
+
+

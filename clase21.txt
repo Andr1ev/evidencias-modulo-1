@@ -1,0 +1,189 @@
+
+Cajero automatico
+
+public class MenuCajero {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Cajero c = new Cajero();
+
+		c.cajero();
+	}
+
+}
+
+
+
+Clase cajero
+
+import java.util.Scanner;
+
+public class Cajero {
+
+	private int opcion;
+
+	// constructor
+	public Cajero() {
+
+	}
+
+	public Cajero(int op) {
+		this.opcion = op;
+	}
+
+	// set y get
+	public void setOpcion(int op) {
+		this.opcion = op;
+	}
+
+	public int getOpcion() {
+		return this.opcion;
+	}
+
+	void cajero() {
+		OpCajero op = new OpCajero();
+		do {
+			Scanner leer = new Scanner(System.in);
+			System.out.println("Elija una opcion: ");
+			System.out.println("1- Consulta Saldo");
+			System.out.println("2- Depositar ");
+			System.out.println("3- Giro ");
+			System.out.println("4- Transferencia ");
+			System.out.println("5- Salir ");
+			int _opcion = leer.nextInt();
+			setOpcion(_opcion);
+
+			switch (getOpcion()) {
+			case 1:
+				op.consulta();
+
+				break;
+			case 2:
+				op.depositar();
+
+				break;
+			case 3:
+				op.giro();
+
+				break;
+			case 4:
+
+				break;
+			case 5:
+				break;
+			default:
+				System.out.print("opcion invalida %n");
+				break;
+			}
+		} while (opcion != 5);
+		System.out.print("programa finalizado ");
+	}
+
+}
+
+
+
+Clase operaciones cajero
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class OpCajero {
+	Scanner leer = new Scanner(System.in);
+	private ArrayList<OpCajero> Datos;
+
+	private String nombre;
+	private int nrocuenta = 1234;
+	private int saldo = 500000;
+
+	public OpCajero() {
+		Datos = new ArrayList<OpCajero>();
+	}
+
+	public OpCajero(String n, int nro, int s) {
+
+		this.nombre = n;
+		this.nrocuenta = nro;
+		this.saldo = s;
+	}
+
+	// set y get
+	public void setNombre(String n) {
+		this.nombre = n;
+	}
+
+	public String getNmobre() {
+		return this.nombre;
+	}
+
+	public void setNrocuenta(int n) {
+		this.nrocuenta = n;
+	}
+
+	public int setNrocuenta() {
+		return this.nrocuenta;
+	}
+
+	public void setSaldo(int s) {
+		this.saldo = s;
+	}
+
+	public int getSaldo() {
+		return this.saldo;
+	}
+	// Datos.add("Andriev", 1234, 500000);
+	// OpCajero andriev = new OpCajero("Andriev", 1234, 500000);
+	// OpCajero Francisco = new OpCajero("Francisco", 9876, 500000);
+
+	void consulta() {
+		System.out.println("su saldo actual es: " + this.saldo);
+	}
+
+	void depositar() {
+		System.out.println("Ingrese monto a depositar");
+		int _saldo = leer.nextInt();
+		_saldo += this.saldo;
+		setSaldo(_saldo);
+		System.out.println("su saldo actual es: " + this.saldo);
+
+	}
+
+	void giro() {
+		System.out.println("Ingrese numero de cuenta");
+		int _cuenta = leer.nextInt();
+		if (_cuenta == this.nrocuenta) {
+			System.out.println("Ingrese monto a girar");
+			int _giro = leer.nextInt();
+			if (this.saldo < _giro) {
+				System.out.println("ERROR.: No pude girar mas del saldo disponible de " + this.saldo);
+			} else {
+				this.saldo -= _giro;
+				System.out.println("su saldo actual es: " + this.saldo);
+			}
+		} else {
+			System.out.println("Numero de cuenta incorrecto");
+
+		}
+	}
+
+	void transferir() {
+		System.out.println("ingrese cuanta a transferir");
+		int _cuenta = leer.nextInt();
+		if (_cuenta == this.nrocuenta) {
+			System.out.println("Ingrese monto a transferir");
+			int _giro = leer.nextInt();
+			if (this.saldo < _giro) {
+				System.out.println("ERROR.: No pude girar mas del saldo disponible de " + this.saldo);
+			} else {
+				this.saldo -= _giro;
+				System.out.println("su saldo actual es: " + this.saldo);
+			}
+		} else {
+			System.out.println("Numero de cuenta incorrecto");
+
+		}
+
+	}
+
+}
+  

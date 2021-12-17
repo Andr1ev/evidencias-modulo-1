@@ -1,0 +1,163 @@
+EJERCICIO CONSULTA
+
+Algoritmo consulta
+	Escribir 'ingrese numero de la cita'
+	Leer cita
+	si (cita > 8) 		
+		Escribir "la cita tiene un costo de 5000 y el total pagado es " cita*5000+5000
+	sino si (cita > 5) y (cita <= 8) 
+		pago = cita-5
+		Escribir "la cita tiene un costo de 10000 y el total pagado es " pago*10000+90000
+		finsi
+	FinSi
+	
+	si	(cita > 3) y  (cita <= 5) entonces
+		pago = cita-3
+		Escribir "la cita tiene un costo de 15000 y el total pagado es " pago*15000+60000
+		
+	
+	SiNo si (cita < 3)	
+			Escribir "la cita tiene un costo de 20000 y el total pagado es " cita*20000
+		FinSi
+		
+	FinSi
+	
+FinAlgoritmo
+
+Algoritmo consulta
+	Escribir 'ingrese numero de la cita'
+	Leer cita
+	Segun cita Hacer
+		(cita > 8):
+			Escribir "la cita tiene un costo de 5000 y el total pagado es " cita*5000+5000
+		(cita > 5 & cita <= 8):
+			cita = cita-5
+			Escribir "la cita tiene un costo de 10000 y el total pagado es " cita*10000+35000
+		(cita > 3 &  cita <= 5):
+			cita = cita-3
+			Escribir "la cita tiene un costo de 15000 y el total pagado es " cita*15000+20000
+		(cita <= 3):
+			Escribir "la cita tiene un costo de 20000 y el total pagado es " cita*20000
+	FinSegun
+FinAlgoritmo
+
+
+EJERCICIO FABRICA EL COMETA
+
+Algoritmo ElCometa
+	Escribir 'ingrese costo materia prima'
+	Leer materia
+	Escribir 'ingrese articulo'
+	Leer articulo
+	Segun articulo Hacer
+		1:
+			mano=materia*0.8
+			gasto=materia*0.28
+		2:
+			mano=materia*0.85
+			gasto=materia*0.3
+		3:
+			
+			mano=materia*0.75
+			gasto=materia*0.35
+		4:
+			mano=materia*0.75
+			gasto=materia*0.28
+		5:
+			mano=materia*0.8
+			gasto=materia*0.3
+		6:
+			mano=materia*0.85
+			gasto=materia*0.35
+			
+	FinSegun
+	costo = materia+mano+gasto
+	Escribir "el precio de venta del producto es: " costo*1.45 
+FinAlgoritmo
+
+
+EJERCICIO SUMAR 10 NUMEROS
+
+Algoritmo SumaPara
+	
+	para i = 1 hasta 10 Con Paso 1 Hacer
+		Escribir "ingrese numero a sumar: "
+		Leer numero
+		sum = sum + numero
+		
+	FinPara
+	Escribir "la suma total es: " sum
+FinAlgoritmo
+
+EJERCICIO PROMEDIO EDAD
+
+Algoritmo PromedioEdad
+	Escribir "ingrese numero alumnos"
+	leer num
+	Para i<-1 Hasta num Hacer
+		Escribir 'ingrese edad:'
+		Leer edad
+		sum <- sum+edad
+	FinPara
+	Escribir 'la edad promedio es: ',sum/num
+FinAlgoritmo
+
+
+
+EJERCICIO DINERO AHORRADO
+
+Algoritmo Ahorro
+	Para i<-1 Hasta 12 Hacer
+		Escribir 'ingrese monto ahorrado:'
+		Leer monto
+		sum <- sum+monto
+		Escribir 'hasta el mes actual lleva ahorrado ', sum
+	FinPara
+	Escribir 'el total ahorrado es: ',sum
+FinAlgoritmo
+
+
+
+EJERCICIO MAYOR MENOR A CERO
+
+Algoritmo MayoresMenores
+	Escribir "ingrese cantidad numeros a calcular "
+	leer cant
+	Para i<-1 Hasta cant Hacer
+		Escribir 'ingrese bumero:'
+		Leer num
+		si num <=0 Entonces
+			men=men+1
+		SiNo
+			may=may+1
+		FinSi
+	FinPara
+	Escribir "la cantidad de numeros menor o igual a cero es: " ,men
+	Escribir "la cantidad de numeros mayor a cero es: " ,may
+	FinAlgoritmo
+
+
+EJERCICIO ENVIO PAQUETES
+
+Algoritmo Paqueteria
+	Escribir 'ingrese peso paquete'
+	Leer kilo
+	Escribir 'ingrese zona'
+	Leer zona
+	si kilo<=5 entonces
+		Segun zona Hacer
+			1:
+				Escribir "el costo del envio es: " ,kilo*1000*110 
+			2:
+				Escribir "el costo del envio es: " ,kilo*1000*100 
+			3:
+				Escribir "el costo del envio es: " ,kilo*1000*120 
+			4:
+				Escribir "el costo del envio es: " ,kilo*1000*2400 
+			5:
+				Escribir "el costo del envio es: " ,kilo*1000*270 				
+		FinSegun
+	SiNo
+		Escribir "el peso del envio excede el limite" 
+	fin si
+FinAlgoritmo
